@@ -1,8 +1,4 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-window.addEventListener('DOMContentLoaded', event => {
+﻿window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -14,7 +10,6 @@ window.addEventListener('DOMContentLoaded', event => {
             navbarCollapsible.classList.remove('navbar-shrink');
             document.querySelectorAll('#mainNav .navbar-nav .nav-item .nav-link').forEach(item => {
                 item.classList.remove('text-dark');
-                item.classList.remove('fw-bold'); // Remove bold font weight when not scrolled
             });
         } else {
             navbarCollapsible.classList.add('navbar-shrink');
@@ -26,20 +21,23 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    window.addEventListener('scroll', function () {
+        var logo = document.getElementById('logo');
+        var scrollPosition = window.scrollY;
+
+        // Change the logo image when scroll position passes a certain threshold
+        if (scrollPosition > 0) { // Change 300 to the desired scroll position
+            logo.src = 'assets/img/navbar-logo-3.png'; // Change to the path of the second logo image
+            logo.style.height = '40px'; // Change to the desired width of the logo image
+        } else {
+            logo.src = 'assets/img/navbar-logo-3-white.png'; // Change to the path of the first logo image
+        }
+    });
+
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
-
-    //  Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -50,7 +48,31 @@ window.addEventListener('DOMContentLoaded', event => {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
+                navbarShrink(); // Call navbarShrink when toggling navbar
             }
         });
     });
+});
+
+// Define the function to handle the click event on the navigation links
+function handleNavLinkClick(event) {
+    // Prevent default behavior of anchor tag
+    event.preventDefault();
+
+    // Get the target section id from the href attribute
+    const targetId = event.currentTarget.getAttribute('href').substring(1);
+
+    // Scroll to the target section
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Get all the navigation links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Attach the event listener to each navigation link
+navLinks.forEach(link => {
+    link.addEventListener('click', handleNavLinkClick);
 });

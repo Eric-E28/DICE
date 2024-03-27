@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DICE\\DicePacific\\DicePacific.csproj",
+      "projectUniqueName": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DicePacific\\src\\DicePacific.csproj",
       "projectName": "DicePacific",
-      "projectPath": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DICE\\DicePacific\\DicePacific.csproj",
+      "projectPath": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DicePacific\\src\\DicePacific.csproj",
       "packagesPath": "C:\\Users\\ericj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DICE\\DicePacific\\obj\\",
+      "outputPath": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DicePacific\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

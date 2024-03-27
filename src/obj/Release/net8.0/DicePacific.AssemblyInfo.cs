@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DicePacific")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4baed4af2910f0ae9922fb8c4cad30f81fb3a0c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74e2ca81b2b4c073137c8a3209f093acff07c759")]
 [assembly: System.Reflection.AssemblyProductAttribute("DicePacific")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DicePacific")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P/6HrQPfZSloJGnPGl0A6ehpY+GCMhni9iv2LkJp3pfWGQfKIotlNM9htHM1FeglOqD8M7Pas6EkgAZiTN5yrg==",
+  "dgSpecHash": "6MX04hGbQsFdmecJOPgpOP06D9UhZ1vPj+pTplYIE7obVgqf++K0desR7kLrmC1VH3yM1Xxpz9EWrRsKHvccRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DICE\\DicePacific\\DicePacific.csproj",
+  "projectFilePath": "C:\\Users\\ericj\\OneDrive\\Desktop\\Github\\DicePacific\\src\\DicePacific.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
