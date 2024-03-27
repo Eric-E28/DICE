@@ -54,7 +54,7 @@
     });
 });
 
-// Define the function to handle the click event on the navigation links
+// Define the function to handle the click event on the navigation links and the "Tell Me More" button
 function handleNavLinkClick(event) {
     // Prevent default behavior of anchor tag
     event.preventDefault();
@@ -69,10 +69,15 @@ function handleNavLinkClick(event) {
     }
 }
 
-// Get all the navigation links
+// Get all the navigation links and the "Tell Me More" button
 const navLinks = document.querySelectorAll('.nav-link');
+const tellMeMoreButton = document.querySelector('.btn-primary');
 
-// Attach the event listener to each navigation link
+// Attach the event listener to each navigation link and the "Tell Me More" button
 navLinks.forEach(link => {
     link.addEventListener('click', handleNavLinkClick);
 });
+
+// Attach the event listener to the "Tell Me More" button
+tellMeMoreButton.addEventListener('click', handleNavLinkClick);
+
